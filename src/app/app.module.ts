@@ -6,23 +6,31 @@ import { AppComponent } from './app.component';
 import { AddToDoComponent } from './add-to-do/add-to-do.component';
 import { ViewAllToDoComponent } from './view-all-to-do/view-all-to-do.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
 const myRoute:Routes=[
 
   {
     path:"viewall",
-    Component:ViewAllToDoComponent
+   component:ViewAllToDoComponent
   },
   {
     path:"add",
-    Component:AddToDoComponent
+   component:AddToDoComponent
+  },
+  {
+    path:"nav",
+    component:NavbarComponent
+  
   }
+
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     AddToDoComponent,
-    ViewAllToDoComponent
+    ViewAllToDoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
